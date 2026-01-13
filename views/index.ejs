@@ -395,20 +395,19 @@
   </h2>
 
   <script>
-    // FIX: Wait for the entire DOM (including all country svg elements) to be ready. (with default script there was a problem when we reach 30-40 countries it stopped applying fills, the reason was the dom was not completely loaded so below is the new script which waits for the dom to be completelyloaded before applying the fill)
+
     document.addEventListener('DOMContentLoaded', () => {
 
-      // Use the robust JSON parsing method to avoid whitespace issues
-      // there's one issue too if somwhere in the countries string there's an extra comma at the end it will create an empty element in the array (find a fix for that later)
+
       const country_codes = "<%= countries %>".split(",")
 
       country_codes.forEach(country => {
-        const element = document.getElementById(country.trim()); //trim precaution to remove the spaces
+        const element = document.getElementById(country.trim());
 
-        if (element) { //if the element exists apply fill
+        if (element) {
           element.style.fill = "<%= color %>";
         } else {
-          // Keep this logging for debugging missing IDs
+
           console.warn(`Element ID not found: ${country.trim()}`);
         }
       });
