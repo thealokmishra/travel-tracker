@@ -150,7 +150,7 @@ app.post("/add", async (req, res) => {
             return res.render("index.ejs", {
                 countries,
                 total: countries.length,
-                error: "Could not add country (DB error)",
+                error: "Please select a User and try again (DB error)",
                 users,
                 color: currentUser ? currentUser.color : "gray",
                 currentUserId,

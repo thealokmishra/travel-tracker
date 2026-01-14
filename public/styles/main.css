@@ -198,6 +198,7 @@ button {
   opacity: 1;
   -webkit-transform: scale(1, 1);
   -webkit-transform: rotate(0deg);
+  transform: scale(1, 1) rotate(0deg);
 }
 
 .tab-view-height-auto>ul {
@@ -466,10 +467,12 @@ button {
 
 .tab-view-effect-scale>ul>li {
   -webkit-transform: scale(0.1, 0.1);
+  transform: scale(0.1, 0.1);
 }
 
 .tab-view-effect-rotate>ul>li {
   -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .tab-view-effect-slide-top>ul>li {
