@@ -536,6 +536,7 @@ button {
 
 .tab-view .active-tab {
   border-bottom: 3px solid #000;
+  color: #ffffff;
   font-weight: 700;
 }
 
